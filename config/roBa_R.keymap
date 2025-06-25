@@ -3,7 +3,7 @@
 
 &trackball {
     // automouse-layer = <L_MOUSE>;
-    scroll-layers = <L_US_SYMBOL L_MOUSE>;
+    scroll-layers = <L_US_SYMBOL L_FUNCTION>;
     // snipe-layer = <3>;
 
     arrows {
