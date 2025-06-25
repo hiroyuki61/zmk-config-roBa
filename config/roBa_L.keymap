@@ -68,7 +68,7 @@
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <165>;
+    tapping-term-ms = <200>;
     quick-tap-ms = <0>;
 };
 
@@ -326,6 +326,42 @@
     bindings = <&kp>, <&kp>;
     };
 
+// より詳細な実装版（推奨）
+/ {
+        // 複合動作の実装
+        bs_sft_rpt: bs_sft_rpt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_SHIFT_REPEAT";
+            #binding-cells = <0>;
+            
+            bindings = <&bs_sft>, <&bs_repeat>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
+        // 基本のバックスペース/シフト動作
+        bs_sft: bs_sft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <140>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <0>;
+            
+            bindings = <&kp>, <&kp>;
+        };
+        
+        // 長押しでリピート
+        bs_repeat: bs_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE_REPEAT";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <0>;
+            
+            bindings = <&key_repeat>, <&kp>;
+        };
     };
 
     keymap {
@@ -336,7 +372,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &bs_sft LEFT_SHIFT BACKSPACE   &bs_repeat 0 BACKSPACE                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -347,7 +383,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &lt L_MOUSE K         &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &bs_sft LEFT_SHIFT BACKSPACE   &bs_repeat 0 BACKSPACE                                                                      &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -415,7 +451,7 @@
             bindings = <
 &kp ESC               &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans                &mkp MCLK     &mkp RCLK     &mkp LCLK     &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)     &trans  &trans      &bootloader  &trans        &HOME        &trans        &END        &bt BT_CLR
 &kp LEFT_CONTROL      &trans        &kp LEFT_ALT  &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
