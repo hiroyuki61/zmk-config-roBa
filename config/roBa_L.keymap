@@ -336,7 +336,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                   &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &mt LEFT_CONTROL F         &kp G                            &kp LS(LG(S))               &kp COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON              &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT       &lt L_FUNCTION F10            &lt L_MOUSE SPACE                &mt LEFT_CONTROL LC(SPACE)            &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT       &lt L_FUNCTION F10            &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)            &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -347,7 +347,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                   &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &mt LEFT_CONTROL F         &kp G                            &kp LS(LG(S))               &kp COLON                  &kp H                 &kp J                &lt L_MOUSE K         &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON              &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT       &lt L_FUNCTION F10            &lt L_MOUSE SPACE                &mt LEFT_CONTROL LC(SPACE)            &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT       &lt L_FUNCTION F10            &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)            &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -385,7 +385,7 @@
         JIS_NUM {
             bindings = <
 &kp F1                      &kp F2           &kp F3           &kp F4           &kp F5                                                       &kp F6        &kp F7             &kp F8          &kp F9           &kp F10
-&kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_5    &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
+&kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_5    &kp LC(LA(KP_NUMBER_0))      &kp JP_YEN  &kp NUMBER_6  &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9     &kp NUMBER_0
 &kp LC(Z)      &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp NUMBER_5    &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp SLASH  &kp CARET       &kp TILDE     &kp AT_SIGN     &kp UNDERSCORE
 &trans            &trans   &trans   &trans    &trans    &trans                       &trans             &trans                                                      &kp F1
             >;
@@ -393,10 +393,10 @@
 
         JIS_SYMBOL {
             bindings = <
-&kp QUESTION     &kp LESS_THAN   &kp GREATER_THAN  &kp SEMICOLON  &kp JP_GRAVE                        &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
-&kp EXCLAMATION  &kp MINUS       &kp JP_EQUAL      &kp JP_PLUS    &kp JP_QUOTE    &trans      &trans  &kp JP_PIPE       &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_COLON       &kp HASH
-&kp JP_CARET     &kp SLASH       &kp JP_ASTERISK   &kp JP_YEN     &kp JP_DQUOTE   &trans      &trans  &kp JP_TILDE      &kp JP_LBRACE    &kp JP_RBRACE    &kp DOLLAR         &kp JP_AT
-&trans           &trans          &trans            &trans         &trans          &trans      &trans  &trans                                                                 &trans
+&kp ESC                &mkp 4          &mkp 5            &kp LC(F)      &kp LC(G)                                     &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
+&kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp LC(NUMBER_8)  &kp JP_PIPE       &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_COLON       &kp HASH
+&mt LEFT_SHIFT LC(Z)   &kp LC(X)       &kp LC(C)         &kp LC(V)      &kp LC(B)       &trans      &kp LC(NUMBER_9)           &kp JP_TILDE      &kp JP_LBRACE    &kp JP_RBRACE    &kp DOLLAR         &kp JP_AT
+&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &trans            &trans                                                                 &trans
             >;
         };
 
