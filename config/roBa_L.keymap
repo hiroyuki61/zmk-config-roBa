@@ -336,7 +336,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT          &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -347,7 +347,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &lt L_MOUSE K         &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW   &kp LEFT_GUI     &kp LEFT_ALT          &ltL_JIS_SYMBOL F10        &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &sands LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -396,7 +396,7 @@
 &kp ESC                &mkp 4          &mkp 5            &kp LC(F)      &kp LC(G)                                     &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
 &kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp LC(NUMBER_8)  &kp JP_PIPE       &kp JP_LPAREN    &kp UP_ARROW     &kp JP_COLON       &kp HASH
 &mt LEFT_SHIFT LC(Z)   &kp LC(X)       &kp LC(C)         &kp LC(V)      &kp LC(B)       &trans      &kp LC(NUMBER_9)  &kp JP_TILDE      &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW    &none
-&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &trans            &trans                                                                 &trans
+&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &trans            &kp DEL                                                                 &trans
             >;
         };
 
