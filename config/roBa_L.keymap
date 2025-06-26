@@ -321,7 +321,7 @@ bspc_main: bspc_main {
     label = "BACKSPACE_MAIN";
     #binding-cells = <0>;
     tapping-term-ms = <200>;
-    bindings = <&bspc_single LEFT_SHFT BACKSPACE>, <&bspc_repeat_hold BACKSPACE>;
+    bindings = <&bspc_single LEFT_SHFT BACKSPACE>, <&bspc_repeat_hold 0 BACKSPACE>;
 };
 
 // 1回目: 通常のhold-tap（タップ=バックスペース、ホールド=シフト）
