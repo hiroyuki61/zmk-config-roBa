@@ -315,26 +315,48 @@
         };
 
     // ここに新しいbehaviorを追加
-    custom_bspc: custom_bspc {
-        compatible = "zmk,behavior-hold-tap";
-        label = "CUSTOM_BACKSPACE";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <140>;
-        quick-tap-ms = <0>;
-        require-prior-idle-ms = <0>;
-        bindings = <&kp>, <&kp>;
-    };
+// メインのtap-dance: 1回タップと2回目の判定
+bspc_main: bspc_main {
+    compatible = "zmk,behavior-tap-dance";
+    label = "BACKSPACE_MAIN";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&bspc_single>, <&bspc_repeat_hold>;
+};
 
-    bspc_repeat: bspc_repeat {
-        compatible = "zmk,behavior-hold-tap";
-        label = "BACKSPACE_REPEAT";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";
-        tapping-term-ms = <400>;
-        quick-tap-ms = <0>;
-        bindings = <&key_repeat>, <&custom_bspc>;
-    };
+// 1回目: 通常のhold-tap（タップ=バックスペース、ホールド=シフト）
+bspc_single: bspc_single {
+    compatible = "zmk,behavior-hold-tap";
+    label = "BACKSPACE_SINGLE";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <140>;
+    quick-tap-ms = <0>;
+    require-prior-idle-ms = <0>;
+    bindings = <&kp>, <&kp>;
+};
+
+// 2回目: バックスペースのhold-tap（タップ=バックスペース、ホールド=バックスペース連打）
+bspc_repeat_hold: bspc_repeat_hold {
+    compatible = "zmk,behavior-hold-tap";
+    label = "BACKSPACE_REPEAT_HOLD";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <140>;
+    quick-tap-ms = <0>;
+    require-prior-idle-ms = <0>;
+    bindings = <&bspc_macro>, <&kp>;
+};
+
+// バックスペース連打用マクロ
+bspc_macro: bspc_macro {
+    compatible = "zmk,behavior-macro";
+    label = "BACKSPACE_MACRO";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp BACKSPACE>
+             , <&macro_pause_for_release>
+             , <&macro_release &kp BACKSPACE>;
+};
 }; // behaviorsセクションの終了
 
     keymap {
@@ -345,7 +367,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &custom_bspc LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
@@ -356,7 +378,7 @@
 &kp Q            &kp W            &kp E              &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A            &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &lt L_MOUSE K         &kp L            &kp MINUS
 &mt LEFT_SHIFT Z &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &kp SEMICOLON                 &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
-&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &custom_bspc LEFT_SHIFT BACKSPACE   &lt L_JIS_NUM ENTER                                                                 &kp PRINTSCREEN
+&mo L_ARROW      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE             &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                 &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_wheel_scrl SCRL_UP SCRL_DOWN>;
