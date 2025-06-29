@@ -380,7 +380,7 @@ bspc_macro: bspc_macro {
 
         US_DEFAULT_LAYER {
             bindings = <
-&kp Q                               &kp W            &kp E              &lt L_FUNCTION  R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
+&kp Q                               &kp W            &lt L_FUNCTION E   &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_JIS_SYMBOL SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
@@ -391,7 +391,7 @@ bspc_macro: bspc_macro {
 
         JIS_DEFAULT_LAYER {
             bindings = <
-&kp Q                                 &kp W            &kp E              &lt L_FUNCTION  R          &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
+&kp Q                                 &kp W            &lt L_FUNCTION E   &kp R                      &kp T                                                                                      &kp Y                 &kp U                &kp I                 &kp O            &lt L_FUNCTION P
 &kp A                                 &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &kp JP_COLON                  &kp H                 &kp J                &lt L_MOUSE K         &kp L            &kp MINUS
 &mt LEFT_SHIFT Z                      &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_MOUSE SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))        &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_JIS_SYMBOL SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                 &kp PRINTSCREEN
