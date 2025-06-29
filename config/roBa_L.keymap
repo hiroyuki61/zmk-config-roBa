@@ -220,22 +220,20 @@
             label = "TASK_SWITCH";
         };
 
-      // 丸括弧 () のマクロ
-         paren_pair: paren_pair {
+// 丸括弧 () のマクロ
+        paren_pair: paren_pair {
             compatible = "zmk,behavior-macro";
             label = "PAREN_PAIR";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LS(NUMBER_8) &kp LS(NUMBER_9)>
-                       , <&macro_tap &kp LEFT>;
-         };
-
-     // 角括弧 [] のマクロ
+            bindings = <&macro_tap &kp LS(NUMBER_8) &kp LS(NUMBER_9) &kp LEFT>;
+        };
+        
+        // 角括弧 [] のマクロ
         bracket_pair: bracket_pair {
-           compatible = "zmk,behavior-macro";
-           label = "BRACKET_PAIR";
-           #binding-cells = <0>;
-           bindings = <&macro_tap &kp JP_LBRACKET &kp JP_RBRACKET>
-                    , <&macro_tap &kp LEFT>;
+            compatible = "zmk,behavior-macro";
+            label = "BRACKET_PAIR";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp JP_LBRACKET &kp JP_RBRACKET &kp LEFT>;
         };
     };  //マクロ終わり
 
