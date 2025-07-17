@@ -336,7 +336,7 @@ bspc_main: bspc_main {
     compatible = "zmk,behavior-tap-dance";
     label = "BACKSPACE_MAIN";
     #binding-cells = <0>;
-    tapping-term-ms = <125>;
+    tapping-term-ms = <205>;
     bindings = <&bspc_single LEFT_SHIFT BACKSPACE>, <&bspc_repeat_hold 0 BACKSPACE>;
 };
 
@@ -443,7 +443,7 @@ bspc_macro: bspc_macro {
 &kp ESC                &mkp MB4        &mkp MB5          &kp LC(F)      &kp LC(G)                                     &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
 &kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp SEMICOLON     &kp JP_PIPE       &kp JP_LPAREN    &kp UP_ARROW     &kp JP_COLON       &kp HASH
 &mt LEFT_SHIFT LC(Z)   &kp LC(X)       &kp LC(C)         &kp LC(V)      &kp LC(B)       &trans      &bracket_pair  &kp JP_TILDE      &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW    &kp LS(SLASH)
-&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &trans            &kp DEL                                                                 &trans
+&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &kp BACKSPACE             &kp DEL                                                                 &trans
             >;
         };
 
