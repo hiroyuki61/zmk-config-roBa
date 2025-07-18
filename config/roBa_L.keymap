@@ -358,7 +358,7 @@ bspc_repeat_hold: bspc_repeat_hold {
     label = "BACKSPACE_REPEAT_HOLD";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <50>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <0>;
     bindings = <&bspc_macro>, <&kp>;
@@ -380,7 +380,7 @@ bspc_macro: bspc_macro {
 
         US_DEFAULT_LAYER {
             bindings = <
-&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_JIS_SYMBOL I                 &kp O            &kp P
+&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_FUNCTION I                 &kp O            &kp P
 &kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
@@ -391,7 +391,7 @@ bspc_macro: bspc_macro {
 
         JIS_DEFAULT_LAYER {
             bindings = <
-&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_JIS_SYMBOL I                  &kp O            &kp P
+&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_FUNCTION I                  &kp O            &kp P
 &kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
 &mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))        &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                 &kp PRINTSCREEN
@@ -461,7 +461,7 @@ bspc_macro: bspc_macro {
         FUNCTION {
             bindings = <
 &kp ESC               &trans        &trans        &trans        &trans                                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans                &mkp MCLK     &mkp RCLK     &mkp LCLK     &trans      &trans       &trans       &trans        &trans        &trans        &trans        &trans
+&trans                &mkp MCLK     &mkp RCLK     &mkp LCLK     &trans      &trans       &trans       &trans        &mkp LCLK        &trans        &mkp RCLK        &trans
 &mt LEFT_SHIFT LC(Z)   &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(B)   &bootloader  &trans       &trans        &kp HOME      &trans     &kp END        &bt BT_CLR
 &kp LEFT_CONTROL      &trans        &kp LEFT_ALT  &trans        &trans      &trans       &trans       &trans                                                  &bt BT_CLR_ALL
             >;
