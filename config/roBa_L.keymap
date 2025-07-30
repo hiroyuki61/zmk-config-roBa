@@ -336,7 +336,7 @@ bspc_main: bspc_main {
     compatible = "zmk,behavior-tap-dance";
     label = "BACKSPACE_MAIN";
     #binding-cells = <0>;
-    tapping-term-ms = <205>;
+    tapping-term-ms = <175>;
     bindings = <&bspc_single LEFT_SHIFT BACKSPACE>, <&bspc_repeat_hold 0 BACKSPACE>;
 };
 
@@ -380,9 +380,9 @@ bspc_macro: bspc_macro {
 
         US_DEFAULT_LAYER {
             bindings = <
-&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_FUNCTION I                 &kp O            &kp P
-&kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
-&mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
+&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                 &kp I                &kp O            &kp P
+&kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K            &kp L            &lt L_FUNCTION MINUS
+&mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair        &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))      &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                       &kp PRINTSCREEN
             >;
 
@@ -391,9 +391,9 @@ bspc_macro: bspc_macro {
 
         JIS_DEFAULT_LAYER {
             bindings = <
-&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                &lt L_FUNCTION I                  &kp O            &kp P
-&kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K                 &kp L            &kp MINUS
-&mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair                   &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
+&kp Q                               &kp W            &kp E              &kp R                      &kp T                                                                           &kp Y                 &kp U                 &kp I                &kp O            &kp P
+&kp A                               &kp S            &kp D              &kp F                      &kp G                            &kp LS(LG(S))               &lt L_FUNCTION JP_COLON                  &kp H                 &kp J                &kp K            &kp L            &lt L_FUNCTION MINUS
+&mt LEFT_SHIFT Z                    &kp X            &kp C              &kp V                      &kp B                            &mkp LCLK                   &paren_pair        &kp N                 &kp M                &kp COMMA             &kp DOT          &lt L_ARROW SLASH
 &lt L_ARROW LG(LS(LEFT_ARROW))        &kp LEFT_GUI     &kp LEFT_ALT       &lt L_JIS_SYMBOL F10       &lt L_FUNCTION SPACE           &mt LEFT_CONTROL LC(SPACE)  &bspc_main   &lt L_JIS_NUM ENTER                                                                 &kp PRINTSCREEN
             >;
 
