@@ -346,7 +346,7 @@ bspc_single: bspc_single {
     label = "BACKSPACE_SINGLE";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <140>;
+    tapping-term-ms = <50>;     // 50msでホールド検出、素早いシフト反応
     quick-tap-ms = <0>;
     require-prior-idle-ms = <0>;
     bindings = <&kp>, <&kp>;
@@ -441,7 +441,7 @@ bspc_macro: bspc_macro {
         JIS_SYMBOL {
             bindings = <
 &kp ESC                &mkp MB4        &mkp MB5          &kp LC(F)      &kp LC(G)                                     &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
-&kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp SEMICOLON     &kp JP_PIPE       &kp JP_LPAREN    &kp UP_ARROW     &kp JP_COLON       &kp HASH
+&kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp SEMICOLON     &kp JP_PIPE       &kp JP_LPAREN    &kp UP_ARROW     &kp JP_RPAREN       &kp HASH
 &mt LEFT_SHIFT LC(Z)   &kp LC(X)       &kp LC(C)         &kp LC(V)      &kp LC(B)       &trans      &bracket_pair  &kp JP_TILDE      &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW    &kp LS(SLASH)
 &kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &kp BACKSPACE             &kp DEL                                                                 &trans
             >;
