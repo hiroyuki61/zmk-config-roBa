@@ -336,7 +336,7 @@ bspc_main: bspc_main {
     compatible = "zmk,behavior-tap-dance";
     label = "BACKSPACE_MAIN";
     #binding-cells = <0>;
-    tapping-term-ms = <100>;  // 2回目のタップを検出するため比較的長く設定
+    tapping-term-ms = <170>;  // 2回目のタップを検出するため比較的長く設定
     bindings = <&bspc_single LEFT_SHIFT BACKSPACE>, <&bspc_repeat_hold 0 BACKSPACE>;
 };
 
@@ -358,7 +358,7 @@ bspc_repeat_hold: bspc_repeat_hold {
     label = "BACKSPACE_REPEAT_HOLD";
     #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <50>;
+    tapping-term-ms = <30>;  //50->30
     quick-tap-ms = <0>;
     require-prior-idle-ms = <0>;
     bindings = <&bspc_macro>, <&kp>;
