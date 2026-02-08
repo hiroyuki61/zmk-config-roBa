@@ -234,7 +234,7 @@
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&kp BSPC>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
@@ -296,7 +296,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&bspc_single LEFT_SHIFT BACKSPACE>, <&bspc_repeat_hold 0 BACKSPACE>;
+            bindings = <&bspc_single LEFT_SHIFT BSPC>, <&bspc_repeat_hold 0 BSPC>;
         };
 
         bspc_single: bspc_single {
@@ -322,9 +322,9 @@
         bspc_macro: bspc_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp BACKSPACE>
+            bindings = <&macro_press &kp BSPC>
                      , <&macro_pause_for_release>
-                     , <&macro_release &kp BACKSPACE>;
+                     , <&macro_release &kp BSPC>;
         };
     };
 
@@ -396,16 +396,16 @@
 &kp ESC                &mkp MB4        &mkp MB5          &kp LC(F)      &kp LC(G)                                     &kp JP_AMPERSAND  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_UNDERSCORE  &kp PERCENT
 &kp LC(A)              &mkp MCLK       &mkp RCLK         &mkp LCLK      &kp JP_QUOTE    &trans      &kp SEMICOLON     &kp JP_PIPE       &kp JP_LPAREN    &kp UP_ARROW     &kp JP_RPAREN       &kp HASH
 &mt LEFT_SHIFT LC(Z)   &kp LC(X)       &kp LC(C)         &kp LC(V)      &kp LC(B)       &trans      &bracket_pair  &kp JP_TILDE      &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW    &kp LS(SLASH)
-&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &kp BACKSPACE             &kp DEL                                                                 &trans
+&kp LEFT_CONTROL       &trans          &trans            &trans         &trans          &trans      &kp BSPC             &kp DEL                                                                 &trans
             >;
         };
 
         ARROW {
             bindings = <
 &kp ESC           &mkp MB4     &mkp MB5     &kp LC(F)   &kp LC(G)                               &trans         &kp HOME         &kp UP_ARROW     &kp END           &none
-&kp LC(A)         &mkp MCLK    &mkp RCLK    &mkp LCLK   &kp LA(F5)  &trans      &trans       &kp BACKSPACE  &trans           &kp UP_ARROW     &trans   &none
+&kp LC(A)         &mkp MCLK    &mkp RCLK    &mkp LCLK   &kp LA(F5)  &trans      &trans       &kp BSPC  &trans           &kp UP_ARROW     &trans   &none
 &kp LC(Z)         &kp LC(X)    &kp LC(C)    &kp LC(V)   &trans      &trans      &trans       &kp DEL        &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW   &none
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LG(TAB)  &trans   &trans      &trans      &kp BACKSPACE  &kp DEL                                                             &kp K_MUTE
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LG(TAB)  &trans   &trans      &trans      &kp BSPC  &kp DEL                                                             &kp K_MUTE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
