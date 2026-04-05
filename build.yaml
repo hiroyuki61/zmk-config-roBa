@@ -18,10 +18,10 @@
 #
 ---
 include:
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: roBa_L rgbled_adapter
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: roBa_R rgbled_adapter
     snippet: studio-rpc-usb-uart
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: settings_reset
